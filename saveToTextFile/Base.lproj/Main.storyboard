@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="saveToTextFile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIq-4l-4Tr">
+                                <rect key="frame" x="16" y="59" width="142" height="44"/>
+                                <color key="tintColor" red="0.91976243260000001" green="0.15462744880000001" blue="0.1066964758" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Write Text">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="writeMyText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Psh-hC-MDs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TI-2G-fNM">
+                                <rect key="frame" x="237" y="59" width="138" height="44"/>
+                                <color key="tintColor" red="0.91976243260000001" green="0.15462744880000001" blue="0.1066964758" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Read Text">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="readMyText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dcs-WS-8zN"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="guitar&amp;amp" translatesAutoresizingMaskIntoConstraints="NO" id="8FK-md-cGX">
+                                <rect key="frame" x="52" y="318" width="288" height="231"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M3k-Rt-epa">
+                                <rect key="frame" x="76" y="146" width="240" height="144"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="a6w-Tq-NSM"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <color key="textColor" red="0.91976243260000001" green="0.23524046370000001" blue="0.267363024" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FQt-H6-Igb">
+                                <rect key="frame" x="76" y="595" width="240" height="144"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="pE5-QK-oKc"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <color key="textColor" red="0.91482274060131052" green="0.91976243260000001" blue="0.4175463665437994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hIq-4l-4Tr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="50N-cI-yI2"/>
+                            <constraint firstItem="9TI-2G-fNM" firstAttribute="leading" secondItem="hIq-4l-4Tr" secondAttribute="trailing" constant="79" id="6eW-xv-ysW"/>
+                            <constraint firstItem="FQt-H6-Igb" firstAttribute="top" secondItem="8FK-md-cGX" secondAttribute="bottom" constant="46" id="7Pg-7k-Voi"/>
+                            <constraint firstItem="hIq-4l-4Tr" firstAttribute="baseline" secondItem="9TI-2G-fNM" secondAttribute="baseline" id="E7E-4F-y5P"/>
+                            <constraint firstItem="M3k-Rt-epa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="Hn1-fR-CpE"/>
+                            <constraint firstItem="hIq-4l-4Tr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SWk-R0-1Yt"/>
+                            <constraint firstItem="M3k-Rt-epa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UvR-Nq-hab"/>
+                            <constraint firstItem="M3k-Rt-epa" firstAttribute="trailing" secondItem="FQt-H6-Igb" secondAttribute="trailing" id="X5g-ah-ObC"/>
+                            <constraint firstItem="8FK-md-cGX" firstAttribute="top" secondItem="M3k-Rt-epa" secondAttribute="bottom" constant="28" id="asa-Ka-4es"/>
+                            <constraint firstItem="9TI-2G-fNM" firstAttribute="baseline" secondItem="hIq-4l-4Tr" secondAttribute="firstBaseline" id="e43-Jo-idk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FQt-H6-Igb" secondAttribute="bottom" constant="79" id="jNK-qS-ecp"/>
+                            <constraint firstItem="M3k-Rt-epa" firstAttribute="centerX" secondItem="8FK-md-cGX" secondAttribute="centerX" id="pn2-kA-GNf"/>
+                            <constraint firstItem="M3k-Rt-epa" firstAttribute="leading" secondItem="FQt-H6-Igb" secondAttribute="leading" id="v9Q-1n-4au"/>
+                            <constraint firstItem="8FK-md-cGX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="vXF-Qs-Ai0"/>
+                            <constraint firstItem="M3k-Rt-epa" firstAttribute="top" secondItem="hIq-4l-4Tr" secondAttribute="bottom" constant="43" id="wom-de-bsa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayTextHere" destination="FQt-H6-Igb" id="Qcs-nT-usP"/>
+                        <outlet property="typeTextHere" destination="M3k-Rt-epa" id="duc-Fn-qCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="guitar&amp;amp" width="1024" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
